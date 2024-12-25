@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusize Sign In</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="./nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href=
+"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+          rel="stylesheet">
+</head>
+<body class="h-screen">
+
+    <h1 class="text-center my-5 text-3xl font-semibold">Welcome...</h1>
+    <div class="flex flex-row mt-32">
+        <div>
+            <img src="./assets/accounts/login.png" alt="" class="mx-10" style="height: 500px;">
+        </div>
+        <div class="w-1/4 ml-auto mr-auto">
+            <form id="form" action="login.html" class="rounded-2xl bg-white w-96 p-10 h-full flex flex-col items-start justify-center">
+                <div class="flex flex-col items-start justify-end">
+                    <h1 class="font-bold text-3xl">Create an account</h1>
+                    <p class="text-black text-sm mb-10">Enter your details below</p>
+                </div>
+                <input type="text" name="Name" id="Name" placeholder="Name" class="border-b-2 border-gray-300 w-full my-4">
+                <input type="email" name="email" id="email" placeholder="Email" class="border-b-2 border-gray-300 w-full my-4">
+                <input type="password" name="password" id="password" placeholder="Password" class="border-b-2 border-gray-300 w-full my-4 mb-10">
+                <button type="submit" class="bg-red-600 text-white px-5 py-2 w-full">Create Account</button>
+                <button class="flex flex-row items-center justify-center gap-3 w-full p-2 mt-3 -mb-10 border border-gray-500 rounded-md">
+                    <i class="fa-brands fa-google fa-lg"></i>
+                    <p>Sign up with Google</p>
+                </button>
+            </form>
+            <div class="flex flex-row gap-3 items-center justify-center mt-3">
+                <p>Already have an account ?</p>
+                <a href="login.html" class="text-purple-700 underline">Login</a>
+            </div>
+        </div>
+    </div>
+    <script src="register.js"></script>
+
+</body>
+</html>
