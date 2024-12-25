@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home View</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="./nav.css" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet">
+    <style>
+
+        
+
+        .image-slider img {
+            transition: transform .7s ease-in-out ;
+        }
+        .image-slider img:hover {
+            transform: scale(110%);
+        }
+        #side {
+            height: 800px;
+            box-shadow: 0 0 15px rgb(136, 135, 135);
+            padding: 10px;
+        }
+        #side a {
+            transition: letter-spacing .7s ease-in-out ;
+        }
+        #side a:hover {
+            letter-spacing: .7px;
+        }
+        footer {
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(4px);
+            margin-left: 10px;
+            margin-top: 200px;
+            margin-right: 10px;
+            border-radius: 10px;
+            border: .5px solid rgb(176, 175, 175);
+        }
+        .labels h1{
+            color: grey;
+        }
+        .labels a{
+            transition: letter-spacing 0.7s ease-in-out;
+        }
+        .labels a:hover {
+            letter-spacing: 3px;
+        }
+        .slider-wrapper {
+        overflow: hidden; 
+        width: 2780px; 
+        height: 390px; 
+        margin: 0 70px;
+        padding: 22px;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+        margin-right: 10px;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-pagination {
+        margin-top: 15px;
+    }
+    
+    .swiper-pagination-bullet {
+        background-color: blue;
+        height: 15px;
+        width: 15px;
+    }
+    .swiper-button-prev{
+        margin-left: 30px;
+        transform: scale(0.5);
+    }
+    .swiper-button-next{
+        transform: scale(0.5);
+        margin-right: -15px;
+    }
+    #slider #swiper {
+        margin-right: 50px;
+    }
+    @media (min-width: 768px) {
+        .swiper {
+            width: 768px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .swiper {
+            width: 1000px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="flex items-center justify-center mt-5">
+        <nav class="bg-white h-14 flex justify-center shadow-lg w-3/4 p-6 rounded-3xl">
+            <div class="container mx-auto flex items-center">
+                <a href="home.html" class="text-2xl font-semibold mr-auto ml-5">Exclusive</a>
+                <ul class="flex flex-row gap-10 items-center justify-center ml-auto ">
+                    <li> <a href="home.html">Home</a> </li>
+                    <li> <a href="cart.html">Cart</a> </li>
+                    <li> <a href="/become-a-seller">Become a Seller</a> </li>
+                </ul>
+                <form action="product.html" class="mx-auto">
+                    <input type="text" name="search" id="search" placeholder="Search products" class="text-center w-72 h-8 bg-gray-100 rounded-md">
+                </form>
+                <div id="i" class="flex flex-col items-center justify-center gap-1">
+                    <a href="account.html" class="flex flex-col items-center justify-center">
+                        <i class="pi pi-user text-lg"></i>
+                        <p>Account</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <script src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
+</body>
+</html>
