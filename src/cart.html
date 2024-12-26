@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="./nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet">
+    <style>
+        footer {
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(4px);
+            margin-left: 10px;
+            margin-top: 200px;
+            margin-right: 10px;
+            border-radius: 10px;
+            border: .5px solid rgb(176, 175, 175);
+        }
+
+        .e404 {
+            height: 300px;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-top: 50px;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            padding: 20px;
+        }
+        .e404 i {
+            font-size: 100px;
+        }
+        .sidebar{
+            height: 700px;
+            box-shadow: 0 0 10px rgb(170, 169, 169);
+        }
+        .lists li{
+            transition: letter-spacing .7s ease-in-out, padding-bottom .7s ease-in-out ;
+        }
+        .lists li:hover{
+            letter-spacing: 2px;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body class="flex flex-col">
+    <div class="flex items-center justify-center mt-5">
+        <nav class="bg-white h-14 flex justify-center shadow-lg w-3/4 p-6 rounded-3xl">
+            <div class="container mx-auto flex items-center">
+                <a href="home.html" class="text-2xl font-semibold mr-auto ml-5">Exclusive</a>
+                <ul class="flex flex-row gap-10 items-center justify-center ml-auto ">
+                    <li> <a href="home.html">Home</a> </li>
+                    <li> <a href="cart.html">Cart</a> </li>
+                    <li> <a href="/become-a-seller">Become a Seller</a> </li>
+                </ul>
+                <form action="product.html" class="mx-auto">
+                    <input type="text" name="search" id="search" placeholder="Search products" class="text-center w-72 h-8 bg-gray-100 rounded-md">
+                </form>
+                <div id="i" class="flex flex-col items-center justify-center gap-1">
+                    <a href="account.html" class="flex flex-col items-center justify-center">
+                        <i class="pi pi-user text-lg"></i>
+                        <p>Account</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="flex flex-row items-center justify-start w-auto">
+        <div class="sidebar bg-white w-64  rounded-tr-xl rounded-br-xl px-2 mt-5">
+            <header class="ml-3 mt-3 text-2xl">Quick Links</header>
+            <ul class="lists ml-5 p-3">
+                <li class="border-b-2 border-gray-300 w-full mb-5"><a href="login.html">Login</a></li>
+                <li class="border-b-2 border-gray-300 w-full mb-5"><a href="cart.html">Cart</a></li>
+                <li class="border-b-2 border-gray-300 w-full mb-5">orders</li>
+                <li class="border-b-2 border-gray-300 w-full mb-5">Mails</li>
+                <li class="border-b-2 border-gray-300 w-full mb-5">Coupons & Reedems</li>
+                <li class="border-b-2 border-gray-300 w-full mb-5">Your address</li>
+                <li class="border-b-2 border-gray-300 w-full mb-5">Your accounts</li>
+            </ul>
+            <ul class="ml-5 p-3">
+                <h1>Follow us on</h1>
+                <div class="mt-2">
+                    <div class="flex flex-row items-center gap-5 bg-black w-40 px-5 py-2 rounded-3xl mb-2">
+                        <i class="pi pi-twitter text-white"></i>
+                        <p class="text-white">Twitter</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-5 bg-pink-700 w-40 px-5 py-2 rounded-3xl mb-2">
+                        <i class="pi pi-instagram
+                        text-white"></i>
+                        <p class="text-white">Instagram</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-5 bg-blue-700 w-40 px-5 py-2 rounded-3xl mb-2">
+                        <i class="pi pi-facebook
+                        text-white"></i>
+                        <p class="text-white">Facebook</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-5 bg-red-700 w-40 px-5 py-2 rounded-3xl mb-2">
+                        <i class="pi pi-youtube
+                        text-white"></i>
+                        <p class="text-white">Youtube</p>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    
+        <div class="cart-container w-5/6">
+    
+        </div>
+    </div>
+    <!-- <div class=" text-center flex flex-col items-center mt-20 e404 bg-gray-100 w-1/2 p-5 justify-center">
+        <i class="pi pi-exclamation-triangle text-orange-400"></i>
+        <h1 class="text-center text-3xl mt-10 text-white">Your cart is empty</h1>
+    </div> -->
+
+
+    <footer class=" flex flex-row items-center justify-center p-5">
+        <div class="flex flex-col items-start justify-center mt-5 ml-20 mr-auto gap-2 text-lg labels">
+            <h1>SHOP BY CATEGORIES</h1>
+            <a href="#">Casual Wears</a>
+            <a href="#">Formal Wears</a>
+            <a href="#">Party and Occasional Wears</a>
+            <a href="#">Work Wears</a>
+            <a href="#">Sneakers and Shoes</a>
+        </div>
+        <div class="flex flex-col items-start justify-center mt-5 ml-20 mr-auto gap-2 text-lg labels">
+            <h1>SHOP BY PRODUCTS</h1>
+            <a href="#">Casual Wears</a>
+            <a href="#">Formal Wears</a>
+            <a href="#">Party and Occasional Wears</a>
+            <a href="#">Work Wears</a>
+            <a href="#">Sneakers and Shoes</a>
+        </div>
+        <div class="flex flex-col items-start justify-center mt-5 ml-20 mr-auto gap-2 text-lg">
+            <a href="#">Casual Wears</a>
+            <a href="#">Formal Wears</a>
+            <a href="#">Party and Occasional Wears</a>
+            <a href="#">Work Wears</a>
+            <a href="#">Sneakers and Shoes</a>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            cart.updateCartUI();
+        });
+    </script>
+
+</body>
+</html>

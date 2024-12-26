@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Delivery</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="./nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet">
+    <style>
+        form{
+            background-color: #cac9c940;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 15px #a3a3a3;
+        }
+        form input{
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #141414;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center h-screen">
+    <form id="form" class="grid grid-flow-row items-center justify-center gap-10 p-5 rounded-xl">
+        <div class="grid grid-cols-2">
+            <label for="username">Name: </label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div class="grid grid-cols-2">
+            <label for="mail">E-Mail: </label>
+            <input type="email" name="mail" id="mail">
+        </div>
+        <div class="grid grid-cols-2">
+            <label for="mobile">Phone: </label>
+            <input type="tel" name="mobile" id="mobile">
+        </div>
+        <div class="grid grid-cols-2">
+            <label for="street">Street: </label>
+            <input type="text" name="street" id="street">
+        </div>
+        <div class="grid grid-cols-2">
+            <label for="city">City: </label>
+            <input type="text" name="city" id="city">
+        </div>
+        <div class="grid grid-cols-2">
+            <label for="district">District: </label>
+            <input type="text" name="district" id="district">
+        </div>
+        <div class="grid grid-cols-2">
+            <label for="pincode">Pincode: </label>
+            <input type="number" name="pincode" id="pincode">
+        </div>
+        <div class="flex flex-row items-center justify-center gap-5">
+            <div class="grid grid-cols-2 items-center justify-center gap-5">
+                <label for="cod">Cash On Delivery</label>
+                <input type="radio" name="delevirytype" id="cod" class="h-5 w-5">
+            </div>
+            <div class="grid grid-cols-2 items-center justify-center gap-5">
+                <label for="online">Online Payment</label>
+                <input type="radio" name="delevirytype" id="online" class="h-5 w-5">
+            </div>
+        </div>
+        <button id="buy" class="text-white bg-purple-800 w-30  py-2 rounded-md">Buy Now</button>
+    </form>
+    <div id="message"></div>
+    <script>
+        const message = document.getElementById("message");
+        
+        const buy = document.getElementById("buy");
+        
+        
+        buy.addEventListener("click", (event) => {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const mail = document.getElementById("mail").value;
+            const mobile = document.getElementById("mobile").value;
+            const street = document.getElementById("street").value;
+            const city = document.getElementById("city").value;
+            const district = document.getElementById("district").value;
+            const pincode = document.getElementById("pincode").value;
+            message.innerHTML = `
+                Product for <strong>${username}</strong> is ordered.<br>
+                Delivery location: ${street}, ${city}, ${district}, ${pincode}.<br>
+                The product is expected to arrive by next week!
+            `;
+            message.style.backgroundColor = "lightgreen";
+            message.style.width = "430px";
+            message.style.textAlign = "left";
+            message.style.padding = "10px";
+            message.style.marginTop = "10px";
+            message.style.fontSize = "18px";
+            message.style.borderRadius = "10px";
+            message.style.boxShadow = "0 0 5px #a3a3a3";
+            setTimeout(() => {
+                window.location.href = "home.html";
+            }, 3000);
+        });
+
+    </script>
+</body>
+</html>

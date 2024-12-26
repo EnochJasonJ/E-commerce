@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="./nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet">
+    <style>
+        img{
+            height: 350px;
+            width: 250px;
+        }
+        .card{
+            box-shadow:  0 0 15px rgb(150, 150, 150);
+            height: 350px;
+            transition: transform 0.7s ease-in-out;
+        }
+        .card:hover{
+            transform: scale(105%);
+        }
+        .card a{
+            transition: background-color 0.7s ease-in-out , color 0.7s ease-in-out;
+        }
+        .card a:hover{
+            background-color: #000;
+            color: springgreen;
+        }
+        footer {
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(4px);
+            margin-left: 10px;
+            margin-top: 200px;
+            margin-right: 10px;
+            border-radius: 10px;
+            border: .5px solid rgb(176, 175, 175);
+        }
+    </style>
+</head>
+<body>
+    <div id="notification-container"></div>
+    <div class="flex items-center justify-center mt-5">
+        <nav class="bg-white h-14 flex justify-center shadow-lg w-3/4 p-6 rounded-3xl">
+            <div class="container mx-auto flex items-center">
+                <a href="home.html" class="text-2xl font-semibold mr-auto ml-5">Exclusive</a>
+                <ul class="flex flex-row gap-10 items-center justify-center ml-auto ">
+                    <li> <a href="home.html">Home</a> </li>
+                    <li> <a href="cart.html">Cart</a> </li>
+                    <li> <a href="/become-a-seller">Become a Seller</a> </li>
+                </ul>
+                <form action="product.html" class="mx-auto">
+                    <input type="text" name="search" id="search" placeholder="Search products" class="text-center w-72 h-8 bg-gray-100 rounded-md">
+                </form>
+                <div id="i" class="flex flex-col items-center justify-center gap-1">
+                    <a href="account.html" class="flex flex-col items-center justify-center">
+                        <i class="pi pi-user text-lg"></i>
+                        <p>Account</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Textured-3-Pcs-Suit-In-Wine-Cocktail-LPLM1752E1PA23FL-image1.jpg?v=1703569953&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Tuxedo Three Piece Navy Textured Formal Suit - Rodrigo</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹10,000</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Two_Piece_Wine_Solid_Formal_Suits_Coach-CPPM2049E1BS24FL-image1.jpg?v=1706083198&width=2000&utm_source=admitad&utm_medium=1376813_&utm_campaign=admitad_54d57fefb8324360c095559525a57695&utm_id=admitad&tagtag_uid=54d57fefb8324360c095559525a57695" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Two Piece Wine Solid Formal Suit - Coach</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹8,397</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Textured_3_Pcs_Suit_In_Pink_Daylit-CPNM1691P2PA23FL-image3.jpg?v=1694436077&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Three Piece Pink Textured Formal Suit - Daylit</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹9,597</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/2-Pcs-Suit-In-Green-Evolve-CPPM1725D2SA23FL-image1.jpg?v=1731402375&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Two Piece Green Solid Formal Suit - Evolve</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹9,597</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Hoodie_Fig_Solid_Sweatshirt_Chad-EECC0291E1NFL-image1.jpg?v=1731408836&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Hoodie Fig Solid Sweatshirt - Chad</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹1,899</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Check_Bomber_Zipper_Jacket_In_Navy_Nadra-CZPM0473N1SA23FL-image1.jpg?v=1697877695&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Bomber Navy Check Zipper Jacket - Nadra</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹3,249</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Hoodie_Black_Solid_Sweatshirt_Chad-EECC0291N1NFL-image1.jpg?v=1731408852&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Hoodie Black Solid Sweatshirt - Chad</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹1,899</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/formal-shirt-in-white-retro-blackberrys-clothing-1.jpg?v=1685958389&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Formal White Solid Shirt - Retro</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹1,499</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Crew-Neck-Sweater-In-Brown-Joseph-UWMU0562C1NA23FL-image1.jpg?v=1703571408&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Crew Neck Brown Solid Sweater - Joseph</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹1,599</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Casual_Indigo_Check_Shirt_Glen-ESCC2892B3NS24FN-image1.jpg?v=1710219940&width=2000&utm_source=admitad&utm_medium=1376813_&utm_campaign=admitad_8294b54301236975766d22172082341e&utm_id=admitad&tagtag_uid=8294b54301236975766d22172082341e" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Casual Indigo Check Shirt - Glen</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹1,399</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/slim-fit-b-91-formal-navy-textured-trouser-finess_1_f03f9f40-68e0-40fa-99d8-97030589a7a1.jpg?v=1710219685&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Slim Fit B-91 Formal Navy Textured Trouser - Finess</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹1,677</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Slim_Fit_B_91_Formal_Grey_Textured_Trouser_Finess-DLPM2621G1IS24FM-image1.jpg?v=1710219685&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Slim Fit B-91 Formal Grey Textured Trouser - Finess</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹2,395</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Slim_Fit_B_91_Formal_Brown_Textured_Trouser_Finess-DLPM2621C1IS24FM-image1.jpg?v=1714397946&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Slim Fit B-91 Formal Brown Textured Trouser - Finess</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹1,849</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Leather_Ivory_White_Solid_Sneakers_Tablet-FN000089W1-image1.jpg?v=1731412127&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Leather Ivory White Solid Sneakers - Tablet</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹5,995</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Leather_Casual_Tan_Textured_Loafer_Shoes_Thread_FL000026E2_image2.jpg?v=1731412405&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Leather Casual Tan Textured Loafer Shoes - Thread</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹5,495</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Leather_Casual_Black_Textured_Loafer_Shoes_Thread_FL000026Z1_image2.jpg?v=1731411877&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Leather Casual Black Textured Loafer Shoes - Thread</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹5,495</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/textured-leather-slip-on-shoes-in-tan-qatar-blackberrys-clothing-1.jpg?v=1685955643&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Leather Tan Textured Slip On Shoes - Qatar</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹3,297</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://blackberrys.com/cdn/shop/files/Leather_Tan_Solid_Slip_On_Shoes_Tanner-FS000110E2-image8.jpg?v=1731411964&width=2000" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Leather Tan Solid Slip On Shoes - Tanner</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹5,495</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://www.libas.in/cdn/shop/files/maroon-yoke-design-silk-blend-anarkali-suit-with-dupatta-libas-2.jpg?v=1734703169&width=1800" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Maroon Yoke Design Silk Blend Anarkali Suit With Dupatta</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹2,399</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://www.libas.in/cdn/shop/files/purple-yoke-design-silk-blend-anarkali-suit-with-dupatta-libas-1.jpg?v=1734703171&width=1800" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Purple Yoke Design Silk Blend Anarkali Suit With Dupatta</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹2,099</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://www.libas.in/cdn/shop/files/yellow-embroidered-georgette-anarkali-kurta-with-churidar-and-dupatta-libas-1.jpg?v=1734589126&width=1800" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Yellow Embroidered Georgette Anarkali Kurta With Churidar & Dupatta</h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹2,219</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="card flex flex-row items-center justify-start gap-10 mt-10 bg-white mx-20 rounded-lg ">
+        <img src="https://www.libas.in/cdn/shop/files/blue-printed-cotton-anarkali-kurta-with-churidar-and-dupatta-libas-2.jpg?v=1734696447&width=1800" alt="" class="rounded-tl-md rounded-bl-md">
+        <div class="cards">
+            <h1 class="text-2xl font-bold product-title">Blue Printed Cotton Anarkali Kurta With Churidar & Dupatta
+            </h1>
+            <p>Perfect for business meetings, weddings, and special events.Rated </p>
+            <p class="text-orange-400">4.8 ratings by 1000+ customers.</p>
+            <div class="flex flex-row gap-2">
+                <div class="text-orange-500">
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-fill"></i>
+                    <i class="pi pi-star-half-fill"></i>
+                </div>
+                <div class="text-blue-700 flex flex-row items-center gap-1">
+                    <i class="pi pi-angle-down "></i>
+                    <p>5,000</p>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-white bg-red-700 w-40 text-center py-1">Limited time deal</h1>
+                <h1 class="text-3xl font-bold product-price">₹1,124</h1>
+            </div>
+            <div class="mt-5 flex flex-col gap-5">
+                <button onclick="showNotification('Product added to cart!')" class="add-to-cart-btn bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40">Add to cart</button>
+                <a href="" class=" bg-purple-500 px-3 py-2 text-white text-center rounded-md w-40 ">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class=" flex flex-row items-center justify-center p-5">
+        <div class="flex flex-col items-start justify-center mt-5 ml-20 mr-auto gap-2 text-lg labels">
+            <h1>SHOP BY CATEGORIES</h1>
+            <a href="#">Casual Wears</a>
+            <a href="#">Formal Wears</a>
+            <a href="#">Party and Occasional Wears</a>
+            <a href="#">Work Wears</a>
+            <a href="#">Sneakers and Shoes</a>
+        </div>
+        <div class="flex flex-col items-start justify-center mt-5 ml-20 mr-auto gap-2 text-lg labels">
+            <h1>SHOP BY PRODUCTS</h1>
+            <a href="#">Casual Wears</a>
+            <a href="#">Formal Wears</a>
+            <a href="#">Party and Occasional Wears</a>
+            <a href="#">Work Wears</a>
+            <a href="#">Sneakers and Shoes</a>
+        </div>
+        <div class="flex flex-col items-start justify-center mt-5 ml-20 mr-auto gap-2 text-lg">
+            <a href="#">Casual Wears</a>
+            <a href="#">Formal Wears</a>
+            <a href="#">Party and Occasional Wears</a>
+            <a href="#">Work Wears</a>
+            <a href="#">Sneakers and Shoes</a>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = new ShoppingCart();
+        });
+    </script>
+</body>
+</html>

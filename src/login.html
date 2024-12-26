@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusize Sign In</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="./nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href=
+"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+          rel="stylesheet">
+</head>
+<body class="h-screen">
+    <h1 class="text-center my-5 text-3xl font-semibold">Welcome...</h1>
+    <div class="flex flex-row mt-32">
+        <div>
+            <img src="./assets/accounts/login.png" alt="" class="mx-10" style="height: 500px;">
+        </div>
+        <div class="w-1/4 ml-auto mr-auto">
+            <form id="form" action="account.html" class="rounded-2xl bg-white w-96 p-10 h-full flex flex-col items-center justify-center">
+                <div class="flex flex-col items-center justify-center mb-10 -mt-20">
+                    <h1 class="font-bold text-3xl">Login</h1>
+                </div>
+                <input type="text" name="Name" id="Name" placeholder="Name" class="border-b-2 border-gray-300 w-full my-4">
+                <input type="email" name="email" id="email" placeholder="Email" class="border-b-2 border-gray-300 w-full my-4">
+                <input type="password" name="password" id="password" placeholder="Password" class="border-b-2 border-gray-300 w-full my-4 mb-10">
+                <button type="submit" class="bg-red-600 text-white px-5 py-2 w-full">login</button>
+                <div class="flex items-center justify-center w-full mt-5">
+                    <a href="">Forgot Password ?</a>
+                    <a href="account.html">New user</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+
+</body>
+</html>
