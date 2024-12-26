@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Exclusize Sign In</title>
     <link href="./output.css" rel="stylesheet">
     <link href="./nav.css" rel="stylesheet">
@@ -34,5 +35,103 @@
         </div>
     </div>
     <script src="login.js"></script>
+=======
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+    <link href="./nav.css" rel="stylesheet">
+    <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet">
+    <link href=
+"https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+          rel="stylesheet">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <style>
+        body{
+            height: 100vh;
+        }
+        /* .im img { */
+            /* margin-left: 350px; */
+            /* margin-right: 300px; */
+        /* } */
+        .imb {
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="flex items-center justify-center mt-5">
+        <nav class="bg-white h-14 flex justify-center shadow-lg w-3/4 p-6 rounded-3xl">
+            <div class="container mx-auto flex items-center">
+                <a href="home.html" class="text-2xl font-semibold mr-auto ml-5">Exclusive</a>
+                <ul class="flex flex-row gap-10 items-center justify-center ml-auto ">
+                    <li> <a href="home.html">Home</a> </li>
+                    <li> <a href="/cart">Cart</a> </li>
+                    <li> <a href="becomesellet.html">Become a Seller</a> </li>
+                </ul>
+                <form class="mx-auto">
+                    <input type="text" name="search" id="search" placeholder="Search products" class="text-center w-72 h-8 bg-gray-100 rounded-md">
+                </form>
+                <div id="i" class="flex flex-col items-center justify-center gap-1">
+                    <a href="/account" class="flex flex-col items-center justify-center">
+                        <i class="pi pi-user text-lg"></i>
+                        <p>Account</p>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <h1 class="text-2xl mt-10 ml-32">T-Shirt Men's Basic design</h1>
+        <div class="flex flex-row items-center justify-center">
+            <div class="flex flex-row items-center gap-52 im">
+                <div class="mr-32">
+                    <div class="flex flex-col justify-center w-14 gap-1 mt-20">
+                        <i class="pi pi-search-plus bg-white text-4xl p-2 rounded-md"></i>
+                        <i class="pi pi-search-minus bg-white text-4xl p-2 rounded-md"></i>
+                        <i class="pi pi-undo bg-white text-4xl p-2 rounded-md"></i>
+                        <i class="pi pi-undo bg-white text-4xl p-2 rounded-md" style="transform: scaleX(-1);"></i>
+                        <i class="pi pi-download bg-white text-4xl p-2 rounded-md"></i>
+                    </div>
+                </div>
+                <img src="./assets/3D/tshirt.png" class="mt-10 mr-10 flex items-center justify-center">
+            </div>
+            <div>
+                <div class="flex flex-col mr-auto"  style="margin-right: 50px;">
+                    <div class="flex  flex-row gap-5 mr-20 ml-auto items-center justify-center">
+                        <div style="width: 80px; padding: 12px;" class="bg-white w-20 rounded-2xl p-3 flex items-center justify-center">
+                            <h1>Design</h1>
+                        </div>
+                        <div style="width: 80px; padding: 12px;" class="bg-white w-20 rounded-2xl p-3 flex items-center justify-center">
+                            <h1 id="color">Color</h1>
+                        </div>
+                        <div style="width: 80px; padding: 12px;" class="bg-white w-20 rounded-2xl p-3 flex items-center justify-center">
+                            <h1 id="text">Text</h1>
+                        </div>
+                        <div style="width: 80px; padding: 12px;" class="bg-white w-20 rounded-2xl p-3 flex items-center justify-center">
+                            <h1>Upload</h1>
+                        </div>
+                    </div>
+                    <div class="bg-white h-72 mt-10 rounded-xl" style="display: flex; flex-direction: column;align-items: center;justify-content: center;border-radius: 10px;">
+                        <button class="mt-5 bg-blue-300 px-3 py-1 rounded-2xl text-center border border-gray-300 imb" style="background-color: rgb(147, 197, 253);height: 40px;
+                        padding: 10px;margin-bottom: 200px;">Upload your image</button>
+                    </div>
+                    <div class="flex flex-row items-center justify-center gap-10 mt-5 text-center">
+                        <i class="pi pi-save bg-white text-lg p-2 rounded-md w-20"><p class="text-sm">drag</p></i>
+                        <i class="pi pi-check bg-white text-lg p-2 rounded-md w-auto" style="width: auto;padding: 8px;"><p class="text-sm" style="font-family: 14px;line-height: 20px;width: auto;">Design Check</p></i>
+                        <i class="pi pi-share-alt bg-white text-lg p-2 rounded-md w-20"  style="width: 80px;"><p class="text-sm">Share</p></i>
+                    </div>
+                    <div class="mt-5 flex flex-row items-center justify-center gap-1">
+                        <h2 class="text-2xl">Amount: 899rs</h2><p class="text-sm">(inc tax)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="rotate.js"></script>
+>>>>>>> 6bb132984b4c8e255f24e31c56b631d54c5ad312
 </body>
 </html>
