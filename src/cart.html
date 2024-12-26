@@ -37,6 +37,17 @@
         .e404 i {
             font-size: 100px;
         }
+        .sidebar{
+            height: 700px;
+            box-shadow: 0 0 10px rgb(170, 169, 169);
+        }
+        .lists li{
+            transition: letter-spacing .7s ease-in-out, padding-bottom .7s ease-in-out ;
+        }
+        .lists li:hover{
+            letter-spacing: 2px;
+            padding-bottom: 5px;
+        }
     </style>
 </head>
 <body class="flex flex-col">
@@ -62,9 +73,47 @@
         </nav>
     </div>
 
-
-    <div class="cart-container mt-20">
-
+    <div class="flex flex-row items-center justify-start w-auto">
+        <div class="sidebar bg-white w-64  rounded-tr-xl rounded-br-xl px-2 mt-5">
+            <header class="ml-3 mt-3 text-2xl">Quick Links</header>
+            <ul class="lists ml-5 p-3">
+                <li class="border-b-2 border-gray-300 w-full mb-5"><a href="login.html">Login</a></li>
+                <li class="border-b-2 border-gray-300 w-full mb-5"><a href="cart.html">Cart</a></li>
+                <li class="border-b-2 border-gray-300 w-full mb-5">orders</li>
+                <li class="border-b-2 border-gray-300 w-full mb-5">Mails</li>
+                <li class="border-b-2 border-gray-300 w-full mb-5">Coupons & Reedems</li>
+                <li class="border-b-2 border-gray-300 w-full mb-5">Your address</li>
+                <li class="border-b-2 border-gray-300 w-full mb-5">Your accounts</li>
+            </ul>
+            <ul class="ml-5 p-3">
+                <h1>Follow us on</h1>
+                <div class="mt-2">
+                    <div class="flex flex-row items-center gap-5 bg-black w-40 px-5 py-2 rounded-3xl mb-2">
+                        <i class="pi pi-twitter text-white"></i>
+                        <p class="text-white">Twitter</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-5 bg-pink-700 w-40 px-5 py-2 rounded-3xl mb-2">
+                        <i class="pi pi-instagram
+                        text-white"></i>
+                        <p class="text-white">Instagram</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-5 bg-blue-700 w-40 px-5 py-2 rounded-3xl mb-2">
+                        <i class="pi pi-facebook
+                        text-white"></i>
+                        <p class="text-white">Facebook</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-5 bg-red-700 w-40 px-5 py-2 rounded-3xl mb-2">
+                        <i class="pi pi-youtube
+                        text-white"></i>
+                        <p class="text-white">Youtube</p>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    
+        <div class="cart-container w-5/6">
+    
+        </div>
     </div>
     <!-- <div class=" text-center flex flex-col items-center mt-20 e404 bg-gray-100 w-1/2 p-5 justify-center">
         <i class="pi pi-exclamation-triangle text-orange-400"></i>
