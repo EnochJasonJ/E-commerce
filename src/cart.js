@@ -25,13 +25,20 @@ class ShoppingCart {
                 <span>${message}</span>
             </div>
         `;
+
+        // Append the notification to the container
         document.getElementById('notification-container').appendChild(notification);
+
+        // Animation logic
         setTimeout(() => notification.classList.remove('translate-x-full'), 0);
         setTimeout(() => {
             notification.classList.add('translate-x-full');
-            setTimeout(() => notification.remove(), 500);
+            setTimeout(() => notification.remove(), 500); // Remove after animation
         }, 2000);
     };
+    
+    // showNotification('Product added to cart!');
+    // Example usage
 
     extractProductData(productCard) {
         return {
@@ -298,7 +305,7 @@ class ShoppingCart {
                         <button onclick="cart.generateInvoice()" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600">
                             Generate Invoice
                         </button>
-                        <button class="bg-purple-500 text-white px-6 py-2 rounded-md hover:bg-purple-600">
+                        <button onclick = "window.location.href='delivery.html'" class="bg-purple-500 text-white px-6 py-2 rounded-md hover:bg-purple-600">
                             Checkout
                         </button>
                     </div>
