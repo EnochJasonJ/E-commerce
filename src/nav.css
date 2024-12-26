@@ -1,0 +1,10 @@
+nav a{
+    transition: letter-spacing .7s ease-in-out;
+}
+nav a:hover{
+    letter-spacing: 2px;
+}
+
+nav input {
+    outline: none;
+}
