@@ -7,6 +7,7 @@
     <link href="./output.css" rel="stylesheet">
     <link href="./nav.css" rel="stylesheet">
     <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <link href=
 "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
           rel="stylesheet">
@@ -14,6 +15,10 @@
         body{
             height: 100vh;
         }
+        /* .im img { */
+            /* margin-left: 350px; */
+            /* margin-right: 300px; */
+        /* } */
         .imb {
             height: 150px;
             display: flex;
@@ -31,7 +36,7 @@
                 <ul class="flex flex-row gap-10 items-center justify-center ml-auto ">
                     <li> <a href="home.html">Home</a> </li>
                     <li> <a href="/cart">Cart</a> </li>
-                    <li> <a href="/become-a-seller">Become a Seller</a> </li>
+                    <li> <a href="becomesellet.html">Become a Seller</a> </li>
                 </ul>
                 <form class="mx-auto">
                     <input type="text" name="search" id="search" placeholder="Search products" class="text-center w-72 h-8 bg-gray-100 rounded-md">
@@ -67,10 +72,10 @@
                             <h1>Design</h1>
                         </div>
                         <div style="width: 80px; padding: 12px;" class="bg-white w-20 rounded-2xl p-3 flex items-center justify-center">
-                            <h1>Color</h1>
+                            <h1 id="color">Color</h1>
                         </div>
                         <div style="width: 80px; padding: 12px;" class="bg-white w-20 rounded-2xl p-3 flex items-center justify-center">
-                            <h1>Text</h1>
+                            <h1 id="text">Text</h1>
                         </div>
                         <div style="width: 80px; padding: 12px;" class="bg-white w-20 rounded-2xl p-3 flex items-center justify-center">
                             <h1>Upload</h1>
@@ -92,5 +97,6 @@
             </div>
         </div>
     </div>
+    <script src="rotate.js"></script>
 </body>
 </html>
