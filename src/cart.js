@@ -25,20 +25,15 @@ class ShoppingCart {
                 <span>${message}</span>
             </div>
         `;
-
-        // Append the notification to the container
         document.getElementById('notification-container').appendChild(notification);
-
-        // Animation logic
         setTimeout(() => notification.classList.remove('translate-x-full'), 0);
         setTimeout(() => {
             notification.classList.add('translate-x-full');
-            setTimeout(() => notification.remove(), 500); // Remove after animation
+            setTimeout(() => notification.remove(), 500);
         }, 2000);
     };
     
     // showNotification('Product added to cart!');
-    // Example usage
 
     extractProductData(productCard) {
         return {
