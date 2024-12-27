@@ -69,16 +69,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Color Change
     colorButton.parentElement.addEventListener('click', () => {
-        const colors = ['#ffffff', '#000000', '#ff0000', '#00ff00', '#0000ff'];
+        const colors = ['#ffffff', '#000000', '#ff0000', '#00ff00', '#0000ff','#fcba03','#8dd4f7','#b98df7','#f58df7','#f78dab','#f7928d','#f7e58d','#c8fa8e','#92fa8e'];
         const colorPicker = document.createElement('div');
         colorPicker.style.cssText = `
             position: absolute;
+            margin-top: 25px;
+            margin-left: 25px;
             display: flex;
             gap: 10px;
             background: white;
             padding: 10px;
             border-radius: 5px;
             z-index: 1000;
+            box-shadow: 0 0 15px #d1d1d1;
         `;
       
         colors.forEach(color => {
@@ -89,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 background: ${color};
                 cursor: pointer;
                 border: 1px solid black;
+                border-radius: 50%;
             `;
             colorDiv.addEventListener('click', () => {
                 if (customText) customText.style.color = color;
