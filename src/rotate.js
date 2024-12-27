@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDragging = false;
     let startX;
     let rotationDegree = 0;
-
-    // Image Upload
     const fileInput = document.createElement('input');
     fileInput.type = 'file';
     fileInput.accept = 'image/*';
@@ -44,8 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         reader.readAsDataURL(file);
     });
-
-    // Text Overlay
     textButton.parentElement.addEventListener('click', () => {
         const text = prompt('Enter your text:');
         if (!text) return;
@@ -66,8 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(customText);
         makeDraggable(customText);
     });
-
-    // Color Change
     colorButton.parentElement.addEventListener('click', () => {
         const colors = ['#ffffff', '#000000', '#ff0000', '#00ff00', '#0000ff','#fcba03','#8dd4f7','#b98df7','#f58df7','#f78dab','#f7928d','#f7e58d','#c8fa8e','#92fa8e'];
         const colorPicker = document.createElement('div');
@@ -113,12 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
           colorPicker.remove(); 
         });
         colorPicker.appendChild(closeButton); 
-      
-        // Append colorPicker to the document body instead
         document.body.appendChild(colorPicker); 
       });
-
-    // Share Functionality
     shareButton.addEventListener('click', () => {
         const shareData = {
             title: 'My Custom T-Shirt Design',
@@ -131,8 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Sharing is not supported on this browser');
         }
     });
-
-    // Download Functionality
     downloadButton.addEventListener('click', () => {
         const container = tshirtImg.parentElement;
         html2canvas(container).then(canvas => {
@@ -142,8 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
             link.click();
         });
     });
-
-    // Make elements draggable
     function makeDraggable(element) {
         let pos = { x: 0, y: 0 };
         
@@ -168,8 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.removeEventListener('mouseup', dragEnd);
         }
     }
-
-    // T-shirt Rotation
     tshirtImg.style.transformOrigin = 'center center';
     tshirtImg.addEventListener('mousedown', (e) => {
         isDragging = true;
@@ -179,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', (e) => {
         if (!isDragging) return;
         const deltaX = e.clientX - startX;
-        rotationDegree += deltaX / 5; // Adjust sensitivity
+        rotationDegree += deltaX / 5;
         tshirtImg.style.transform = `rotateY(${rotationDegree}deg)`;
         startX = e.clientX;
     });
