@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem("password", password);
 
         alert("Login successful!");
+        window.location.href = 'index.html';
+        
 
         // Show welcome message
         form.classList.add("hidden");
